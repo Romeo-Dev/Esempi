@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="343.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.OpController">
+   <children>
+      <Label layoutX="250.0" layoutY="14.0" prefHeight="24.0" prefWidth="174.0" text="My Operations" textFill="#f52424">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="41.0" layoutY="38.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="77.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="123.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nome:" />
+            <Label text="Cognome:" GridPane.rowIndex="1" />
+            <Label text="Balance:" GridPane.rowIndex="2" />
+            <Label fx:id="nome_lb" text="Label" GridPane.columnIndex="1" />
+            <Label fx:id="cognome_lb" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="balance_lb" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="265.0" onAction="#back" prefHeight="56.0" prefWidth="106.0" ripplerFill="#f2eded" style="-fx-background-color: #F50000;" text="&lt;-- Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <effect>
+            <MotionBlur />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="437.0" layoutY="128.0" onAction="#buttonDeposito" prefHeight="56.0" prefWidth="151.0" ripplerFill="#f2eded" style="-fx-background-color: #F50000;" text="Deposita" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <effect>
+            <MotionBlur />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="225.0" layoutY="128.0" onAction="#buttonPrelievo" prefHeight="56.0" prefWidth="151.0" ripplerFill="#f2eded" style="-fx-background-color: #F50000;" text="Prelievo" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <effect>
+            <MotionBlur />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="190.0" layoutY="237.0" onAction="#ListaMove" prefHeight="56.0" prefWidth="212.0" ripplerFill="#f2eded" style="-fx-background-color: #F50000;" text="Lista Movimenti" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <effect>
+            <MotionBlur />
+         </effect>
+      </JFXButton>
+      <JFXTextField fx:id="importo_txt" focusColor="BLACK" labelFloat="true" layoutX="337.0" layoutY="64.0" promptText="Importo" unFocusColor="#f50000">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <AnchorPane fx:id="pane_lista" layoutX="414.0" layoutY="189.0" prefHeight="148.0" prefWidth="220.0">
+         <children>
+            <GridPane layoutX="10.0" layoutY="6.0" prefHeight="148.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="55.0" minHeight="7.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="81.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="101.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Movimento 1°:" />
+                  <Label text="Movimento 2°:" GridPane.rowIndex="1" />
+                  <Label text="Movimento 3°:" GridPane.rowIndex="2" />
+                  <Label text="Movimento 4°:" GridPane.rowIndex="3" />
+                  <Label text="Movimento 5°:" GridPane.rowIndex="4" />
+                  <Label fx:id="mov_uno" text="Label" GridPane.columnIndex="1" />
+                  <Label fx:id="mov_due" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="mov_tre" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="mov_quattro" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="mov_cinque" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
