@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ProfiloUtenteViewController">
+   <children>
+      <Label layoutX="41.0" layoutY="79.0" text="Nome:" />
+      <Label layoutX="315.0" layoutY="79.0" text="Cognome:" />
+      <Label layoutX="323.0" layoutY="125.0" prefHeight="21.0" prefWidth="32.0" text="Eta:" />
+      <Label layoutX="43.0" layoutY="125.0" text="Ruolo:" />
+      <Label layoutX="310.0" layoutY="177.0" text="Professione:" />
+      <Label layoutX="43.0" layoutY="222.0" text="Sesso:" />
+      <Label layoutX="42.0" layoutY="268.0" text="E-mail:" />
+      <Label layoutX="53.0" layoutY="177.0" text="Liv:" />
+      <Label layoutX="318.0" layoutY="233.0" text="Premium:" />
+      <Label layoutX="287.0" layoutY="279.0" text="Titolo di studio:" />
+      <Button layoutX="299.0" layoutY="395.0" mnemonicParsing="false" onAction="#richiestaPremium" prefWidth="200.0" text="Diventa Premium" />
+      <Button layoutX="299.0" layoutY="352.0" mnemonicParsing="false" onAction="#richiestaTrascrittore" prefWidth="200.0" text="Diventa Trascrittore" />
+      <Button layoutX="38.0" layoutY="395.0" mnemonicParsing="false" onAction="#Back" text="indietro" />
+      <Button layoutX="95.0" layoutY="321.0" mnemonicParsing="false" onAction="#stampaInfo" text="Info" />
+      <TextField fx:id="lognome" editable="false" layoutX="93.0" layoutY="74.0" prefHeight="31.0" prefWidth="187.0" />
+      <TextField fx:id="logruolo" editable="false" layoutX="93.0" layoutY="120.0" />
+      <TextField fx:id="logliv" editable="false" layoutX="93.0" layoutY="172.0" />
+      <TextField fx:id="logsesso" editable="false" layoutX="93.0" layoutY="218.0" />
+      <TextField fx:id="logemail" editable="false" layoutX="93.0" layoutY="263.0" />
+      <TextField fx:id="logcognome" editable="false" layoutX="399.0" layoutY="74.0" />
+      <TextField fx:id="logeta" editable="false" layoutX="399.0" layoutY="120.0" />
+      <TextField fx:id="logprofessione" editable="false" layoutX="399.0" layoutY="172.0" />
+      <TextField fx:id="logpremium" editable="false" layoutX="399.0" layoutY="229.0" />
+      <TextField fx:id="logtitolost" editable="false" layoutX="399.0" layoutY="274.0" />
+   </children>
+</AnchorPane>
