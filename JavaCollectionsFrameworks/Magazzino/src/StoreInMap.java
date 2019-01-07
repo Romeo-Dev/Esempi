@@ -54,6 +54,15 @@ public class StoreInMap {
     }
 
 
+
+    public void  inBasePrice(){
+        set = new TreeSet<>(new SortedByPrice());
+        set.addAll(map.values());
+        System.out.println(set);
+    }
+
+
+
     public Prodotto ricerca(String codice){
         return map.get(codice);
     }

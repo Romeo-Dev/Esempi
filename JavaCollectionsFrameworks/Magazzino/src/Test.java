@@ -74,7 +74,9 @@ public class Test {
         // rispetto codice
                 //magazzino.stampaMagazzino();
         // rispetto nome
-                magazzino.inBaseNome();
+                //magazzino.inBaseNome();
+        // rispetto prezzo
+                magazzino.inBasePrice();
 
         //--------------------------------------------------------------
         System.out.println();
@@ -86,7 +88,7 @@ public class Test {
         magazzino.cancellazione("ZZ123");
         magazzino.cancellazione("AB567");
 
-        magazzino.stampaMagazzino();
+        //magazzino.stampaMagazzino();
 
     }
 }
