@@ -29,8 +29,8 @@ public class Articolo implements Comparable<Articolo> {
     }
 
     public double getPrezzo() {
-        if (this.prezzo < 0){
-            this.prezzo = 0;
+        if (prezzo < 0){
+            prezzo = 0;
             return  prezzo;
         }else
         return prezzo;
@@ -50,7 +50,7 @@ public class Articolo implements Comparable<Articolo> {
 
     @Override
     public String toString() {
-        return "Codice: "+codice+"\t Prodotto: "+nome+"\nPrezzo: "+prezzo+"$\n";
+        return "Codice: "+codice+"\t Prodotto: "+nome+"\nPrezzo: "+this.getPrezzo()+"$\n";
     }
 
     @Override
